@@ -1,85 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://paisainminutes.com/index.html</loc>
+    <loc>http://localhost:8000/index.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://paisainminutes.com/check-eligibility.html</loc>
+    <loc>http://localhost:8000/check-eligibility.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://paisainminutes.com/personal-loan-calculator.html</loc>
+    <loc>http://localhost:8000/personal-loan-calculator.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://paisainminutes.com/offers.html</loc>
+    <loc>http://localhost:8000/offers.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://paisainminutes.com/how-it-works.html</loc>
+    <loc>http://localhost:8000/how-it-works.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paisainminutes.com/about.html</loc>
+    <loc>http://localhost:8000/about.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://paisainminutes.com/contact.html</loc>
+    <loc>http://localhost:8000/contact.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://paisainminutes.com/faq.html</loc>
+    <loc>http://localhost:8000/faq.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://paisainminutes.com/blog.html</loc>
+    <loc>http://localhost:8000/blog.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://paisainminutes.com/blog-post.html</loc>
+    <loc>http://localhost:8000/blog-post.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://paisainminutes.com/loan-disclosures.html</loc>
+    <loc>http://localhost:8000/loan-disclosures.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://paisainminutes.com/privacy-policy.html</loc>
+    <loc>http://localhost:8000/privacy-policy.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://paisainminutes.com/terms-and-conditions.html</loc>
+    <loc>http://localhost:8000/terms-and-conditions.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://paisainminutes.com/grievance-redressal.html</loc>
+    <loc>http://localhost:8000/grievance-redressal.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://paisainminutes.com/sitemap.xml
+Sitemap: http://localhost:8000/sitemap.xml
