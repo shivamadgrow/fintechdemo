@@ -1,4 +1,4 @@
-# Paisa in Minutes – Fintech Personal Loan Discovery Website (HTML & Vanilla JS)
+# Fintech Marketing Agency – Fintech Personal Loan Discovery Website (HTML & Vanilla JS)
 
 A high-performance, modern consumer fintech website for personal loan discovery and eligibility education in India, built purely in **Semantic HTML5**, **Vanilla CSS (Custom Design System)**, and **Vanilla JavaScript** inspired by modern fintech aesthetics.
 

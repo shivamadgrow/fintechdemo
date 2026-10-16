@@ -1,8 +1,8 @@
-# System Architecture: Paisa in Minutes
+# System Architecture: Fintech Marketing Agency
 
 ## High-Level Architectural Overview
 
-- **Platform Name**: **Paisa in Minutes**
+- **Platform Name**: **Fintech Marketing Agency**
 - **Domain Focus**: Short-term personal loan discovery & financial education in India (Capped at ₹1,00,000 maximum).
 - **Technology Stack**: Semantic HTML5, Vanilla CSS with custom Design System tokens, Vanilla JavaScript (zero bloated dependencies), client-side state management & offline-first localStorage support.
 
