@@ -1,8 +1,5 @@
 # Robots.txt for Paisa in Minutes
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /data/
-Disallow: /api/
 
-Sitemap: http://localhost:8000/sitemap.xml
+Sitemap: https://paisainminutes.com/sitemap.xml

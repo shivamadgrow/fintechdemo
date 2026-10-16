@@ -275,46 +275,56 @@ class EligibilityWizard {
     if (this.submitSpinner) this.submitSpinner.style.display = 'inline-block';
 
     const formData = new FormData(this.form);
+    const amount = parseInt(formData.get('loan_amount') || '50000', 10);
+    const randomDigits = Math.floor(100000 + Math.random() * 900000);
+    const leadRef = 'PIM-2610-' + randomDigits;
+
+    // Simulate instant digital pre-screening verification
+    await new Promise((resolve) => setTimeout(resolve, 800));
 
     try {
-      const response = await fetch('api/submit-lead.php', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'X-Requested-With': 'XMLHttpRequest',
-        },
-      });
+      // Store lead record in localStorage for offline persistence
+      try {
+        const leadRecord = {
+          lead_reference: leadRef,
+          full_name: formData.get('full_name') || '',
+          mobile_number: formData.get('mobile_number') || '',
+          employment_type: formData.get('employment_type') || '',
+          monthly_income: formData.get('monthly_income') || '',
+          loan_amount: amount,
+          tenure_months: formData.get('tenure_months') || '12',
+          city: formData.get('city') || '',
+          pincode: formData.get('pincode') || '',
+          created_at: new Date().toISOString()
+        };
+        const stored = JSON.parse(localStorage.getItem('pim_demo_leads') || '[]');
+        stored.unshift(leadRecord);
+        localStorage.setItem('pim_demo_leads', JSON.stringify(stored.slice(0, 50)));
+      } catch (storageErr) {
+        console.warn('LocalStorage save skipped:', storageErr);
+      }
 
-      const result = await response.json();
+      // Track conversion event
+      if (window.PIMAnalytics) {
+        window.PIMAnalytics.trackEvent('generate_lead', {
+          lead_id: leadRef,
+          loan_amount: amount,
+          value: amount,
+          currency: 'INR',
+        });
+      }
 
-      if (response.ok && result.success) {
-        // Successful submission
-        if (window.PIMAnalytics) {
-          window.PIMAnalytics.trackEvent('generate_lead', {
-            lead_id: result.lead_reference,
-            loan_amount: result.loan_amount,
-            value: result.loan_amount,
-            currency: 'INR',
-          });
+      // Show Success View
+      if (this.wizardContainer) this.wizardContainer.style.display = 'none';
+      if (this.successContainer) {
+        this.successContainer.style.display = 'block';
+        if (this.successReferenceId) {
+          this.successReferenceId.textContent = leadRef;
         }
-
-        // Show Success View
-        if (this.wizardContainer) this.wizardContainer.style.display = 'none';
-        if (this.successContainer) {
-          this.successContainer.style.display = 'block';
-          if (this.successReferenceId) {
-            this.successReferenceId.textContent = result.lead_reference;
-          }
-        }
-      } else {
-        this.showAlert(result.message || 'We could not process your application at this moment. Please verify your details and try again.');
-        this.submitBtn.disabled = false;
-        if (this.submitSpinner) this.submitSpinner.style.display = 'none';
-        this.isSubmitting = false;
       }
     } catch (err) {
       console.error('Submission error:', err);
-      this.showAlert('Network connectivity issue. Please check your connection and retry.');
+      this.showAlert('An unexpected error occurred. Please verify your details and try again.');
       this.submitBtn.disabled = false;
       if (this.submitSpinner) this.submitSpinner.style.display = 'none';
       this.isSubmitting = false;

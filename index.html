@@ -1,18 +1,151 @@
-<?php
-/**
- * Paisa in Minutes - Homepage
- * Production-ready Indian Fintech Personal Loan Discovery & Eligibility Platform
- * Inspired by Milestone template visual aesthetics & structure
- */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-declare(strict_types=1);
+  <!-- Primary SEO Meta Tags -->
+  <title>Paisa in Minutes – Where India Discovers Fair, Fast Personal Loans | Paisa in Minutes</title>
+  <meta name="title" content="Paisa in Minutes – Where India Discovers Fair, Fast Personal Loans | Paisa in Minutes">
+  <meta name="description" content="Discover instant personal loans up to ₹1,00,000 from verified RBI-regulated NBFCs &amp; Banks. Interactive loan slider, zero hidden charges, and transparent repayment calculation.">
+  <link rel="canonical" href="https://paisainminutes.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#0b1536">
 
-$pageTitle = 'Paisa in Minutes – Where India Discovers Fair, Fast Personal Loans';
-$pageDescription = 'Discover instant personal loans up to ₹1,00,000 from verified RBI-regulated NBFCs & Banks. Interactive loan slider, zero hidden charges, and transparent repayment calculation.';
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://paisainminutes.com/">
+  <meta property="og:title" content="Paisa in Minutes – Where India Discovers Fair, Fast Personal Loans | Paisa in Minutes">
+  <meta property="og:description" content="Discover instant personal loans up to ₹1,00,000 from verified RBI-regulated NBFCs &amp; Banks. Interactive loan slider, zero hidden charges, and transparent repayment calculation.">
+  <meta property="og:image" content="https://paisainminutes.com/assets/images/og-preview.png">
+  <meta property="og:site_name" content="Paisa in Minutes">
+  <meta property="og:locale" content="en_IN">
 
-require_once __DIR__ . '/includes/header.php';
-$partners = $config['lending_partners'];
-?>
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://paisainminutes.com/">
+  <meta name="twitter:title" content="Paisa in Minutes – Where India Discovers Fair, Fast Personal Loans | Paisa in Minutes">
+  <meta name="twitter:description" content="Discover instant personal loans up to ₹1,00,000 from verified RBI-regulated NBFCs &amp; Banks. Interactive loan slider, zero hidden charges, and transparent repayment calculation.">
+  <meta name="twitter:image" content="https://paisainminutes.com/assets/images/og-preview.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/design-system.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+
+  <!-- Schema.org JSON-LD Structured Data for Financial Platform & Lending Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://paisainminutes.com/#organization",
+        "name": "Paisa in Minutes Financial Technologies Private Limited",
+        "alternateName": "Paisa in Minutes",
+        "url": "https://paisainminutes.com",
+        "telephone": "+91 1800 202 8899",
+        "email": "support@paisainminutes.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Tower B, 4th Floor, FinTech Park, Cyber City",
+          "addressLocality": "Gurugram",
+          "addressRegion": "Haryana",
+          "postalCode": "122002",
+          "addressCountry": "IN"
+        }
+      },
+      {
+        "@type": "FinancialProduct",
+        "name": "Paisa in Minutes Personal Loan Discovery",
+        "description": "Short-term personal loan discovery service up to ₹1,00,000 with flexible tenures of 3 to 24 months.",
+        "provider": {
+          "@id": "https://paisainminutes.com/#organization"
+        },
+        "annualPercentageRate": {
+          "@type": "QuantitativeValue",
+          "minValue": 11.99,
+          "maxValue": 28,
+          "unitText": "PERCENT"
+        },
+        "amount": {
+          "@type": "MonetaryAmount",
+          "currency": "INR",
+          "minValue": 10000,
+          "maxValue": 100000        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Client-Side Analytics Configuration -->
+  <script>
+    window.PIM_ANALYTICS_CONFIG = {
+      ga4Id: "G-DEMO12345",
+      pixelId: "987654321012345",
+      debug: true,
+    };
+  </script>
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="container site-nav">
+    <!-- Brand Logo -->
+    <a href="index.html" class="nav-brand" aria-label="Paisa in Minutes Homepage">
+      <div class="nav-brand-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="1" x2="12" y2="23"></line>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
+      </div>
+      <div>
+        Paisa<span class="accent">inMinutes</span>
+      </div>
+    </a>
+
+    <!-- Navigation Links -->
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links" id="navLinks">
+        <li>
+          <a href="index.html" class="nav-link active">Home</a>
+        </li>
+        <li>
+          <a href="check-eligibility.html" class="nav-link ">Check Eligibility</a>
+        </li>
+        <li>
+          <a href="personal-loan-calculator.html" class="nav-link ">Loan Calculator</a>
+        </li>
+        <li>
+          <a href="offers.html" class="nav-link ">Partner Offers</a>
+        </li>
+        <li>
+          <a href="how-it-works.html" class="nav-link ">How It Works</a>
+        </li>
+        <li>
+          <a href="faq.html" class="nav-link ">FAQs</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="nav-actions">
+      <a href="check-eligibility.html" class="btn btn-yellow btn-sm" id="navCtaBtn">
+        Apply Now
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-toggle-btn" id="navToggleBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        &#9776;
+      </button>
+    </div>
+  </div>
+</header>
+<main id="mainContent">
 
 <!-- ============================================================================
      HERO SECTION
@@ -43,14 +176,14 @@ $partners = $config['lending_partners'];
         </p>
 
         <div class="hero-ctas">
-          <a href="check-eligibility.php" class="btn btn-yellow btn-lg" id="heroApplyBtn">
+          <a href="check-eligibility.html" class="btn btn-yellow btn-lg" id="heroApplyBtn">
             Check Eligibility Free
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
-          <a href="personal-loan-calculator.php" class="btn btn-outline-white btn-lg">
+          <a href="personal-loan-calculator.html" class="btn btn-outline-white btn-lg">
             Detailed Calculator
           </a>
         </div>
@@ -138,7 +271,7 @@ $partners = $config['lending_partners'];
           </div>
 
           <div style="margin-top: 1.25rem;">
-            <a href="check-eligibility.php" class="btn btn-primary btn-block">
+            <a href="check-eligibility.html" class="btn btn-primary btn-block">
               Apply With This Estimate &rarr;
             </a>
           </div>
@@ -213,7 +346,7 @@ $partners = $config['lending_partners'];
     </div>
 
     <div style="margin-top: 3rem;">
-      <a href="check-eligibility.php" class="btn btn-primary btn-lg">
+      <a href="check-eligibility.html" class="btn btn-primary btn-lg">
         Start Your Free Eligibility Journey
       </a>
     </div>
@@ -310,55 +443,165 @@ $partners = $config['lending_partners'];
           Compare real, authorized digital lending programs with verified APR ranges.
         </p>
       </div>
-      <a href="offers.php" class="btn btn-outline-navy btn-sm">
+      <a href="offers.html" class="btn btn-outline-navy btn-sm">
         View All Partner Disclosures &rarr;
       </a>
     </div>
 
     <div class="grid grid-cols-2" style="gap: 1.5rem;">
-      <?php foreach (array_slice($partners, 0, 4) as $p): ?>
-        <div class="offer-card">
+              <div class="offer-card">
           <div>
             <div class="offer-header">
               <div>
-                <span class="badge badge-emerald" style="margin-bottom: 0.5rem;"><?= htmlspecialchars($p['badge']) ?></span>
-                <h3 class="heading-4"><?= htmlspecialchars($p['name']) ?></h3>
+                <span class="badge badge-emerald" style="margin-bottom: 0.5rem;">Lowest APR</span>
+                <h3 class="heading-4">Tata Capital Financial Services Ltd.</h3>
                 <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">
-                  <?= htmlspecialchars($p['category']) ?> &bull; RBI Reg: <?= htmlspecialchars($p['rbi_reg_no']) ?>
-                </div>
+                  Systemically Important Non-Deposit Taking NBFC &bull; RBI Reg: N-13.01823                </div>
               </div>
             </div>
 
             <div class="offer-features-grid">
               <div class="offer-feature-item">
                 <div class="feature-title">Max Limit</div>
-                <div class="feature-val" style="color:#2563eb;">₹<?= number_format($p['max_amount']) ?></div>
+                <div class="feature-val" style="color:#2563eb;">₹100,000</div>
               </div>
               <div class="offer-feature-item">
                 <div class="feature-title">Annual Rate (APR)</div>
-                <div class="feature-val"><?= $p['min_apr'] ?>% - <?= $p['max_apr'] ?>%</div>
+                <div class="feature-val">11.99% - 24%</div>
               </div>
               <div class="offer-feature-item">
                 <div class="feature-title">Supported Tenure</div>
-                <div class="feature-val"><?= $p['min_tenure'] ?> to <?= $p['max_tenure'] ?> Months</div>
+                <div class="feature-val">3 to 24 Months</div>
               </div>
               <div class="offer-feature-item">
                 <div class="feature-title">Processing Fee</div>
-                <div class="feature-val"><?= htmlspecialchars($p['processing_fee']) ?></div>
+                <div class="feature-val">1.5% - 2.5% + GST</div>
               </div>
             </div>
 
             <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1rem;">
-              Speed: <?= htmlspecialchars($p['disbursal_speed']) ?>
-            </p>
+              Speed: As quick as 2 hours post KYC verification            </p>
           </div>
 
-          <a href="<?= htmlspecialchars($p['apply_url']) ?>" class="btn btn-primary btn-block" data-partner-outbound="<?= htmlspecialchars($p['id']) ?>" data-partner-name="<?= htmlspecialchars($p['name']) ?>">
-            Check Eligibility for <?= htmlspecialchars(explode(' ', $p['name'])[0]) ?> &rarr;
+          <a href="check-eligibility.html?partner=tata-capital" class="btn btn-primary btn-block" data-partner-outbound="tata-capital" data-partner-name="Tata Capital Financial Services Ltd.">
+            Check Eligibility for Tata &rarr;
           </a>
         </div>
-      <?php endforeach; ?>
-    </div>
+              <div class="offer-card">
+          <div>
+            <div class="offer-header">
+              <div>
+                <span class="badge badge-emerald" style="margin-bottom: 0.5rem;">Instant Digital KYC</span>
+                <h3 class="heading-4">IIFL Finance Limited</h3>
+                <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">
+                  RBI Registered NBFC-ND-SI &bull; RBI Reg: B-13.01792                </div>
+              </div>
+            </div>
+
+            <div class="offer-features-grid">
+              <div class="offer-feature-item">
+                <div class="feature-title">Max Limit</div>
+                <div class="feature-val" style="color:#2563eb;">₹100,000</div>
+              </div>
+              <div class="offer-feature-item">
+                <div class="feature-title">Annual Rate (APR)</div>
+                <div class="feature-val">13.5% - 26%</div>
+              </div>
+              <div class="offer-feature-item">
+                <div class="feature-title">Supported Tenure</div>
+                <div class="feature-val">6 to 24 Months</div>
+              </div>
+              <div class="offer-feature-item">
+                <div class="feature-title">Processing Fee</div>
+                <div class="feature-val">2% - 3% + GST</div>
+              </div>
+            </div>
+
+            <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Speed: Same business day after digital approval            </p>
+          </div>
+
+          <a href="check-eligibility.html?partner=iifl-finance" class="btn btn-primary btn-block" data-partner-outbound="iifl-finance" data-partner-name="IIFL Finance Limited">
+            Check Eligibility for IIFL &rarr;
+          </a>
+        </div>
+              <div class="offer-card">
+          <div>
+            <div class="offer-header">
+              <div>
+                <span class="badge badge-emerald" style="margin-bottom: 0.5rem;">Paperless Workflow</span>
+                <h3 class="heading-4">DMI Finance Private Limited</h3>
+                <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">
+                  RBI Registered NBFC &bull; RBI Reg: B-14.01708                </div>
+              </div>
+            </div>
+
+            <div class="offer-features-grid">
+              <div class="offer-feature-item">
+                <div class="feature-title">Max Limit</div>
+                <div class="feature-val" style="color:#2563eb;">₹80,000</div>
+              </div>
+              <div class="offer-feature-item">
+                <div class="feature-title">Annual Rate (APR)</div>
+                <div class="feature-val">15% - 28%</div>
+              </div>
+              <div class="offer-feature-item">
+                <div class="feature-title">Supported Tenure</div>
+                <div class="feature-val">3 to 18 Months</div>
+              </div>
+              <div class="offer-feature-item">
+                <div class="feature-title">Processing Fee</div>
+                <div class="feature-val">2.5% + GST</div>
+              </div>
+            </div>
+
+            <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Speed: Direct to bank via UPI / IMPS within 24 hours            </p>
+          </div>
+
+          <a href="check-eligibility.html?partner=dmi-finance" class="btn btn-primary btn-block" data-partner-outbound="dmi-finance" data-partner-name="DMI Finance Private Limited">
+            Check Eligibility for DMI &rarr;
+          </a>
+        </div>
+              <div class="offer-card">
+          <div>
+            <div class="offer-header">
+              <div>
+                <span class="badge badge-emerald" style="margin-bottom: 0.5rem;">Flexible Repayment</span>
+                <h3 class="heading-4">InCred Financial Services Ltd.</h3>
+                <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">
+                  RBI Registered NBFC &bull; RBI Reg: B-13.01736                </div>
+              </div>
+            </div>
+
+            <div class="offer-features-grid">
+              <div class="offer-feature-item">
+                <div class="feature-title">Max Limit</div>
+                <div class="feature-val" style="color:#2563eb;">₹100,000</div>
+              </div>
+              <div class="offer-feature-item">
+                <div class="feature-title">Annual Rate (APR)</div>
+                <div class="feature-val">14% - 27.5%</div>
+              </div>
+              <div class="offer-feature-item">
+                <div class="feature-title">Supported Tenure</div>
+                <div class="feature-val">6 to 24 Months</div>
+              </div>
+              <div class="offer-feature-item">
+                <div class="feature-title">Processing Fee</div>
+                <div class="feature-val">2.0% - 3.5% + GST</div>
+              </div>
+            </div>
+
+            <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Speed: Within 4-8 working hours upon KYC verification            </p>
+          </div>
+
+          <a href="check-eligibility.html?partner=incred-financial" class="btn btn-primary btn-block" data-partner-outbound="incred-financial" data-partner-name="InCred Financial Services Ltd.">
+            Check Eligibility for InCred &rarr;
+          </a>
+        </div>
+          </div>
   </div>
 </section>
 
@@ -454,10 +697,10 @@ $partners = $config['lending_partners'];
       Paperless application, no branch visits, and transparent terms from India's most reputable regulated lenders.
     </p>
     <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-      <a href="check-eligibility.php" class="btn btn-yellow btn-lg">
+      <a href="check-eligibility.html" class="btn btn-yellow btn-lg">
         Check Eligibility Now (Free)
       </a>
-      <a href="personal-loan-calculator.php" class="btn btn-outline-white btn-lg">
+      <a href="personal-loan-calculator.html" class="btn btn-outline-white btn-lg">
         Try EMI Calculator
       </a>
     </div>
@@ -465,6 +708,124 @@ $partners = $config['lending_partners'];
 </section>
 
 <!-- Include Loan Calculator script for live slider preview -->
-<script src="assets/js/calculator.js?v=<?= $config['app']['version'] ?>" defer></script>
+<script src="assets/js/calculator.js" defer></script>
 
-<?php require_once __DIR__ . '/includes/footer.php'; ?>
+</main><!-- /#mainContent -->
+
+<!-- Global Cookie Consent Notice -->
+<aside id="cookieConsentBanner" style="display:none; position:fixed; bottom:20px; left:20px; right:20px; max-width:540px; margin:0 auto; z-index:9999; background:rgba(11,21,54,0.95); border:1px solid rgba(255,255,255,0.18); border-radius:18px; padding:1.25rem 1.5rem; backdrop-filter:blur(12px); box-shadow:0 20px 40px rgba(0,0,0,0.4); color:#fff;" role="dialog" aria-live="polite" aria-label="Privacy Consent Notice">
+  <div style="display:flex; align-items:flex-start; gap:1rem;">
+    <div style="font-size:1.5rem; line-height:1;">🍪</div>
+    <div style="flex:1;">
+      <h4 style="font-size:0.9375rem; font-weight:700; color:#fff; margin-bottom:0.35rem;">Privacy & Transparency Notice</h4>
+      <p style="font-size:0.8125rem; color:#cbd5e1; line-height:1.5; margin-bottom:1rem;">
+        We use essential cookies to maintain secure loan calculations and anonymous analytics to understand site usage under India's DPDP Act. We never sell your personal financial data.
+      </p>
+      <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+        <button type="button" id="acceptCookieBtn" class="btn btn-yellow btn-sm" style="font-size:0.8125rem; padding:0.4rem 1rem;">
+          Accept All
+        </button>
+        <button type="button" id="declineCookieBtn" class="btn btn-outline-white btn-sm" style="font-size:0.8125rem; padding:0.4rem 1rem;">
+          Essential Only
+        </button>
+        <a href="privacy-policy.html" style="color:#94a3b8; font-size:0.8125rem; align-self:center; text-decoration:underline;">Read Policy</a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="grid grid-cols-4" style="gap: 2.5rem;">
+      <!-- Col 1: About & Brand -->
+      <div style="grid-column: span 1.3;">
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:1rem;">
+          <div style="width:32px; height:32px; background:var(--color-royal-600); border-radius:8px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800;">
+            ₹
+          </div>
+          <span style="font-family:var(--font-heading); font-size:1.35rem; font-weight:800; color:#fff;">
+            Paisa<span style="color:var(--color-accent-yellow);">inMinutes</span>
+          </span>
+        </div>
+        <p style="color:#94a3b8; font-size:0.875rem; line-height:1.6; margin-bottom:1.25rem;">
+          India's trusted personal loan discovery and eligibility platform. We connect credit-seeking individuals with RBI-registered Banks and NBFCs for fast, fair, and paperless loan disbursals up to ₹1,00,000.
+        </p>
+        <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.8125rem;">
+          <div><strong style="color:#cbd5e1;">Support:</strong> <a href="tel:+9118002028899">+91 1800 202 8899</a></div>
+          <div><strong style="color:#cbd5e1;">Email:</strong> <a href="mailto:support@paisainminutes.com">support@paisainminutes.com</a></div>
+          <div><strong style="color:#cbd5e1;">CIN:</strong> U72900DL2023PTC123456</div>
+        </div>
+      </div>
+
+      <!-- Col 2: Products & Calculators -->
+      <div>
+        <h5>Loan Products</h5>
+        <ul class="footer-links">
+          <li><a href="check-eligibility.html">Personal Loans (₹10k - ₹1L)</a></li>
+          <li><a href="personal-loan-calculator.html">EMI Loan Calculator</a></li>
+          <li><a href="offers.html">Partner Loan Offers</a></li>
+          <li><a href="how-it-works.html">Digital Lending Journey</a></li>
+          <li><a href="check-eligibility.html?type=salaried">Salaried Personal Loan</a></li>
+          <li><a href="check-eligibility.html?type=self-employed">Self-Employed Loan</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Company & Education -->
+      <div>
+        <h5>Resources</h5>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="faq.html">Frequently Asked Questions</a></li>
+          <li><a href="blog.html">Financial Literacy Guides</a></li>
+          <li><a href="contact.html">Contact & Support</a></li>
+          
+        </ul>
+      </div>
+
+      <!-- Col 4: Regulatory & Compliance -->
+      <div>
+        <h5>Compliance & Legal</h5>
+        <ul class="footer-links">
+          <li><a href="privacy-policy.html">Privacy Policy (DPDP Act)</a></li>
+          <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+          <li><a href="loan-disclosures.html">RBI Digital Lending Disclosures</a></li>
+          <li><a href="grievance-redressal.html">Grievance Redressal Matrix</a></li>
+          <li><a href="sitemap.xml">XML Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mandatory RBI Digital Lending & Key Fact Statement (KFS) Disclosures -->
+    <div class="footer-disclosures">
+      <p style="margin-bottom: 0.85rem;">
+        <strong>Statutory Regulatory Notice:</strong> Paisa in Minutes Financial Technologies Private Limited operates strictly as a Lending Service Provider (LSP) and loan aggregator facilitating digital discovery. We are NOT a Bank, Non-Banking Financial Company (NBFC), or money lender, and we do not directly lend money or accept public deposits. All personal loan applications, credit appraisals, underwriting, sanctions, and disbursals are executed directly by our RBI-registered lending partners in full adherence to the Reserve Bank of India’s Digital Lending Guidelines. Submitting an application on this platform does NOT guarantee loan approval or disbursal.
+      </p>
+      <p style="margin-bottom: 0.85rem;">
+        <strong>Representative Loan Example (Key Fact Statement Illustrative):</strong> For a personal loan of <strong>₹50,000</strong> borrowed at an Annual Percentage Rate (APR) of <strong>14.5%</strong> for a tenure of <strong>12 Months</strong>: Monthly Equated Installment (EMI) is <strong>₹4,501</strong>. Total interest payable over the tenure is <strong>₹4,012</strong>. Processing fee is ₹1,000 + 18% GST (₹180). Total cost of the loan (Principal + Interest) is <strong>₹54,012</strong>. Net disbursal amount: ₹48,820. Representative APR range across approved partners: 11.99% to 28%. Repayment tenure: 3 months to 24 months.
+      </p>
+      <p>
+        <strong>Nodal Grievance Redressal Officer:</strong> Rohan Varma, Principal Grievance Redressal &amp; Nodal Officer | Email: <a href="mailto:grievance@paisainminutes.com" style="color:#ece863;">grievance@paisainminutes.com</a> | Phone: +91 0124 489 8890 | Escalation Portal: <a href="https://sachet.rbi.org.in/" target="_blank" rel="noopener noreferrer" style="color:#ece863;">RBI Sachet Portal</a>.
+      </p>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="footer-bottom">
+      <div>
+        &copy; 2026 Paisa in Minutes Financial Technologies Private Limited. All rights reserved.
+      </div>
+      <div style="display:flex; gap:1.5rem;">
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-and-conditions.html">Terms</a>
+        <a href="loan-disclosures.html">Disclosures</a>
+        <a href="grievance-redressal.html">Grievance</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Core JavaScript Assets -->
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/analytics.js" defer></script>
+</body>
+</html>
